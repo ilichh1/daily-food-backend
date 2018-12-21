@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form With Express</title>
+</head>
+
+<body>
+  <form action="/todo" method="POST">
+    <p>
+      <label>
+        Nombre:
+        <input type="text" name="todo_name" placeholder="Todo #1">
+      </label>
+    </p>
+    <p>
+      <label>
+        Importancia:
+        <select name="todo_priority">
+          <option value="low">Baja</option>
+          <option value="normal">Normal</option>
+          <option value="high">Alta</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <button type="submit">Enviar!</button>
+    </p>
+  </form>
+</body>
+
+</html>

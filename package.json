@@ -1,0 +1,19 @@
+{
+  "name": "daily-food-backend",
+  "version": "1.0.0",
+  "description": "A simple backend for a simple food app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/nodemon/bin/nodemon.js index.js"
+  },
+  "author": "ilichh1",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
