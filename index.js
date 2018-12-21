@@ -1,5 +1,8 @@
 const express = require('express');
+// Registered users
 const authUsers = require('./users');
+// List of food
+const foodList = require('./food');
 
 const bodyParser = require('body-parser');
 
@@ -14,10 +17,6 @@ app.use(bodyParser.json());
 
 app.listen(8080, function() {
   console.log('Server started!');
-});
-
-app.get('/', function(req, res) {
-  res.sendfile(__dirname + '/index.html');
 });
 
 app.post('/auth', function(req, res) {
@@ -95,8 +94,6 @@ app.post('/diet', function(req, res) {
 	res.status(200).send({ message: "Diet saved successfully."});
 });
 
-app.post('/todo', function (req, res) {
-  console.log('Hello from POST');
-  console.log(req.body);
-  res.end();
+app.get('/food-list', function(req, res) {
+	res.status(200).send({ foodList });
 });
